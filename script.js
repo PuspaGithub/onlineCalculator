@@ -50,7 +50,9 @@ numPad.addEventListener("click", (e) => {
     console.log(e.target.textContent)
     if(e.target.textContent === "<-"){
         clicked.pop();
+        input.value = clicked.join("");
     }else if(e.target.textContent === "="){
+        input.value = clicked.join("");
         input.value = '';
         let result = calculate(clicked);
         console.log(`result: ${result}`)
@@ -58,8 +60,9 @@ numPad.addEventListener("click", (e) => {
     }
     else{
         clicked.push(e.target.textContent);
+        input.value = clicked.join("");
     }
-    input.value = clicked.join("");
+    
     
 })
 
