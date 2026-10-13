@@ -52,14 +52,17 @@ numPad.addEventListener("click", (e) => {
         clicked.pop();
         input.value = clicked.join("");
     }else if(e.target.textContent === "="){
+        //displays all the value we clicked like 123+34
         input.value = clicked.join("");
         input.value = '';
         let result = calculate(clicked);
         console.log(`result: ${result}`)
+        //displays the result inside the input box
         input.value = result;
     }
     else{
         clicked.push(e.target.textContent);
+        //displays all the value we clicked like 123+34
         input.value = clicked.join("");
     }
     
@@ -73,6 +76,16 @@ function calculate(...clicked){
     let firstNum = Number(splited[0]);
     let secondNum = Number(splited[2]);
 
+    let lookUp = {
+        "+": (a, b) => a+b,
+        "-": (a, b) => a-b,
+        "x": (a, b) => a*b,
+        "/": (a, b) => a/b
+    }
+
+    return lookUp[splited[1]] (firstNum, secondNum);
+    /*
+
     if (splited[1] === "+"){
         return firstNum + secondNum;
     }else if (splited[1] === "-"){
@@ -82,4 +95,5 @@ function calculate(...clicked){
     }else if (splited[1] === "/"){
         return firstNum / secondNum;
     }
+        */
 }
