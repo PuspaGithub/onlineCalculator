@@ -29,8 +29,8 @@ let operator = ["+", "-", "x", "/", "%", "=", "<-"];
 //Displays all the numbers
 for(let i=0; i<num.length; i++){
     let button = document.createElement("button");
-    button.classList = "num_button";
-    button.classList.add(num[i]);
+    button.classList.add("num_button");
+    //button.classList.add(num[i]);
     button.textContent = num[i];
     numPad.appendChild(button);
 }

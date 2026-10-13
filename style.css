@@ -6,7 +6,7 @@ body {
   min-height: 100vh;
 }
 .container {
-  height: 90vh;
+  height: 95vh;
   width: 50%;
   background-color: bisque;
   border-radius: 20px;
@@ -17,12 +17,24 @@ body {
   /* flex-direction: column; */
 }
 
+form {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.input_div{
+  justify-content: center;
+  margin: auto auto;
+}
+
 .input {
   margin: 10px;
-  width: 40vw;
-  height: 10vh;
+  width: 90%;
+  height: 50px;
   box-sizing: border-box;
   border-radius: 20px;
+  align-items: center;
 }
 
 .num-pad {
@@ -42,6 +54,16 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.num_button,
+.operator_btn {
+  width: 30%;
+  height: 70px;
+  margin: 5px;
+  font-size: 24px;
+  color: black;
+  background-color: white;
 }
 
 .operator-pad {
